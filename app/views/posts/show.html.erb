@@ -1,0 +1,38 @@
+
+<h1>タスクの詳細</h1>
+
+<%= link_to '一覧に戻る', posts_path, class: 'nav-link' %>
+
+<table class="show">
+    <tr>
+        <th>タイトル</th>
+        <td><%= @post.title %></td>
+    </tr>
+    <tr>
+        <th>開始日</th>
+        <td><%= @post.start_at %></td>
+    </tr>
+    <tr>
+        <th>終了日</th>
+        <td><%= @post.end_at %></td>
+    </tr>
+    <tr>
+        <th>終日</th>
+        <td>
+            <% if @post.is_all_day == true %>
+            ○
+            <% else @post.is_all_day == false %>
+            <% end %>
+        </td>
+    </tr>
+    <tr>
+        <th>スケジュールメモ</th>
+        <td><%= simple_format(h(@post.description)) %>
+    </tr>
+</table>
+
+<%= link_to '編集', edit_post_path  %>
+
+
+
+

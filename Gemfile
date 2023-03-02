@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'bootsnap', '>=0', require: false
+ gem 'rails-i18n'
+ 

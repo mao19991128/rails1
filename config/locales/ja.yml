@@ -1,0 +1,26 @@
+ja:
+   activerecord:
+     models:
+       post: ポスト
+     attributes:
+       post:
+         id: ID
+         title: タイトル
+         start_at: 開始日
+         end_at: 終了日
+         is_all_day: 終日
+         created_at: 更新日時
+         description: スケジュールメモ
+      helpers:
+        select:
+          prompt: 選択してください
+        submit:
+          create: 登録する
+          submit: 保存する
+          update: 更新する
+
+ja:
+  time:
+    fomats:
+      default: "%Y/%m/%d"
+
