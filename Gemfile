@@ -73,4 +73,6 @@ end
 
 gem 'bootsnap', '>=0', require: false
  gem 'rails-i18n'
+
+ gem 'data-confirm-modal'
  

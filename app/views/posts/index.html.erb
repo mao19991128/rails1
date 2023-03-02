@@ -23,7 +23,7 @@
           <td><%= post.id %></td>
           <td><%= post.title %></td>
           <td>
-            <%= post.start_at.strftime('%Y/%m/%d') %>
+            <%= post.start_at %>
           </td>
           <td><%= post.end_at %></td>
           <td>
@@ -39,7 +39,7 @@
             <%= link_to "編集", edit_post_path(post) %>
           </td>
           <td>
-            <%= link_to "削除", post_path(post), data: { turbo_method: :delete}, turbo_confirm: "本当に削除しますか？" %>
+            <%= link_to "削除", post_path(post), data: { turbo_method: :delete,  turbo_confirm: "本当に削除しますか？" } %>
           </td>
         </tr>
       <% end %>
@@ -48,3 +48,8 @@
     <% end %>
   </tbody>
 </table>
+
+<footer>
+  <h1>本日の日付：<%= Date.today.strftime('%Y/%m/%d') %> スケジュール合計：<%= Post.count %></h1>
+</footer>  
+    
