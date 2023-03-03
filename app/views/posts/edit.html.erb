@@ -1,5 +1,11 @@
 <h1>スケジュールの編集</h1>
 
+<%= render "shared/error", obj: @post %>
+
+<% if flash[:notice] %>
+   <p class="notice"><%= flash[:notice] %></p>
+ <% end %>
+
 <%= form_with model:@post do |f| %>
   <%= f.label :title, 'タイトル' %>
   <%= f.text_field :title, class: 'form-control' ,id: 'post_title' %>

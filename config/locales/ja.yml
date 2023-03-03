@@ -1,8 +1,8 @@
 ja:
    activerecord:
-     models:
-       post: ポスト
-     attributes:
+      models:
+        post: ポスト
+      attributes:
        post:
          id: ID
          title: タイトル
@@ -23,4 +23,7 @@ ja:
   time:
     fomats:
       default: "%Y/%m/%d"
+  
+  errors:
+    messages:
 

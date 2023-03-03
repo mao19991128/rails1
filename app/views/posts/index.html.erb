@@ -1,5 +1,9 @@
 <h1>予定一覧</h1>
 
+<% if flash[:notice] %>
+   <p class="notice"><%= flash[:notice] %></p>
+ <% end %>
+
 <%= link_to "新規登録", new_post_path %>
 
 <table class="table_main">
@@ -23,9 +27,9 @@
           <td><%= post.id %></td>
           <td><%= post.title %></td>
           <td>
-            <%= post.start_at %>
+            <%= post.start_at.strftime('%Y/%m/%d') %>
           </td>
-          <td><%= post.end_at %></td>
+          <td><%= post.end_at.strftime('%Y/%m/%d') %></td>
           <td>
             <% if post.is_all_day %>
               <strong>○<strong>
