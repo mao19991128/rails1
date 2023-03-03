@@ -24,8 +24,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_url, notice: "スケジュールを登録しました"
     else
-      render "new", status: :unprocessable_entity
       flash.now[:notice] = "スケジュールの登録に失敗しました"
+      render "new", status: :unprocessable_entity
     end
   end
 
@@ -39,8 +39,8 @@ class PostsController < ApplicationController
     if @post.update(params.require(:post).permit(:title, :start_at, :end_at, :is_all_day, :description))
       redirect_to posts_url, notice: "スケジュールを編集しました"
     else
+      flash.now[:notice] = "スケジュールの編集に失敗しました"
       render "edit", status: :unprocessable_entity
-      flash.now[:failure] = "スケジュールの編集に失敗しました"
     end
   end
 
