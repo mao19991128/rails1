@@ -54,7 +54,8 @@ class PostsController < ApplicationController
 end
 
 private
-
+    
   def post_params
-    params.require(:post).permit(:name, :description)
+    params.require(:post).permit(:name, :description, :srart_at, :end_at, :is_all_day)
   end
+  
